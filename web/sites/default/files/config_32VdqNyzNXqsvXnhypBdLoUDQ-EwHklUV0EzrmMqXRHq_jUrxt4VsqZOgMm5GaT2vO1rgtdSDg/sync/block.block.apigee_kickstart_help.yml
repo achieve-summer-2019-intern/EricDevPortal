@@ -1,0 +1,22 @@
+uuid: 2846b96b-7375-49aa-8c96-a565f620df65
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - apigee_kickstart
+_core:
+  default_config_hash: U8J1Fny7jZb_gGP7JvUh2rlRnlzgUK0QzforRHFrM_c
+id: apigee_kickstart_help
+theme: apigee_kickstart
+region: content
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

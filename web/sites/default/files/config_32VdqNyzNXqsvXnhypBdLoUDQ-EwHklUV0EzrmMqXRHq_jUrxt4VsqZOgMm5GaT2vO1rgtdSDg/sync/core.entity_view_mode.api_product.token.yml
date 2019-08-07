@@ -1,0 +1,10 @@
+uuid: f509993f-313d-4d8d-8ed7-b3bd0809308a
+langcode: en
+status: true
+dependencies:
+  module:
+    - apigee_edge
+id: api_product.token
+label: Token
+targetEntityType: api_product
+cache: true

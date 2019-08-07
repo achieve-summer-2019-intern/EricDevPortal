@@ -1,0 +1,12 @@
+uuid: 91a7b8aa-8cac-4ef5-9d77-c43c46a8096a
+langcode: en
+status: true
+dependencies:
+  module:
+    - apigee_edge
+_core:
+  default_config_hash: mv37yxAiuVkM1hxd3bl2EamKK4qdfyA9buQR5k5SWbM
+id: developer_app.collapsible_card
+label: 'Collapsible card'
+targetEntityType: developer_app
+cache: true
