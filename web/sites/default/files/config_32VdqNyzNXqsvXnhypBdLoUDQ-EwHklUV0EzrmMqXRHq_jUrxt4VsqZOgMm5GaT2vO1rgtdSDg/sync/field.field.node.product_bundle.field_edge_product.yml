@@ -1,0 +1,29 @@
+uuid: 38475014-b931-469e-8805-d337f5cf84a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edge_product
+    - node.type.product_bundle
+    - taxonomy.vocabulary.product_tiers
+id: node.product_bundle.field_edge_product
+field_name: field_edge_product
+entity_type: node
+bundle: product_bundle
+label: 'Edge Product'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      product_tiers: product_tiers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

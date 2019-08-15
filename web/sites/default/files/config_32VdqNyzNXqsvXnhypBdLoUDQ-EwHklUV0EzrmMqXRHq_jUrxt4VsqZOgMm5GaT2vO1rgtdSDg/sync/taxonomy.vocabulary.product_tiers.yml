@@ -1,0 +1,8 @@
+uuid: af278283-7b97-4279-aaa6-d8c4c5dd7ca6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Tiers'
+vid: product_tiers
+description: ''
+weight: 0

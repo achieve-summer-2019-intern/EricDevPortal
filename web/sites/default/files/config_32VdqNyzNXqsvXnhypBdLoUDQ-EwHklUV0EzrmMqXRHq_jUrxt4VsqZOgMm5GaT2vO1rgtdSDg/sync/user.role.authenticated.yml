@@ -1,4 +1,4 @@
-uuid: bf2b8ee2-34dc-4a7d-8628-55f715ac89e3
+uuid: 6dd76ffb-eab1-462b-870d-c65c7c43a6f4
 langcode: en
 status: true
 dependencies: {  }
@@ -16,11 +16,19 @@ permissions:
   - 'analytics own developer_app'
   - 'create developer_app'
   - 'delete own developer_app'
+  - 'download prepaid balance reports'
   - 'post comments'
+  - 'purchase rate_plan'
+  - 'refresh own prepaid balance'
   - 'search content'
   - 'skip comment approval'
   - 'update own developer_app'
+  - 'update own purchased_plan'
   - 'use text format basic_html'
   - 'view media'
+  - 'view own billing details'
   - 'view own developer_app'
+  - 'view own prepaid balance'
+  - 'view own purchased_plan'
   - 'view published apidoc entities'
+  - 'view rate_plan'
