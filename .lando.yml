@@ -1,4 +1,4 @@
-name: my-kickstarted-developer-portal
+name: my-kickstart-developer-portal
 recipe: drupal8
 config:
-  webroot: .
+  webroot: web

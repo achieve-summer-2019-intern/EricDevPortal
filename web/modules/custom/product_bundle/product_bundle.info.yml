@@ -1,0 +1,5 @@
+name: Product Bundle 
+type: module
+description: Bundles API products together
+core: 8.x
+package: Custom

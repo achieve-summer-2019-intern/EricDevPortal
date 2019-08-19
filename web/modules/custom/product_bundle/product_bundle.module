@@ -1,0 +1,44 @@
+<?php
+
+function product_bundle_form_alter(&$form, &$form_state, &$form_id) {
+    drupal_set_message($form_id);
+
+    if($form_id == 'developer_app_add_for_developer_form') {
+        
+        $myproduct1 = [];
+        $myproduct2 = [];
+
+        foreach($form['api_products']['#options'] as $key => $value) {
+            $display_name = substr($value, 0, 9);
+            if ($display_name == 'Product 1') {
+                array_push($myproduct1, $value);
+                drupal_set_message('This is product 1: ' . $key);
+            }
+            if ($display_name == 'Product 2') {
+                array_push($myproduct2, $value);
+                drupal_set_message('This is product 2: ' . $key);
+            }
+        }
+
+        $form['group1'] = array(
+            '#type' => 'fieldset',
+            '#title' => t('API Products'),
+            '#weight' => 95,
+            '#collapsible' => FALSE,
+            '#collapsed' => FALSE,  
+            );
+
+        $form['group1']['product1'] = [
+            '#title' => 'Product 1',
+            '#type' => 'radios',
+            '#default_value' => 0,
+            '#options' => $myproduct1
+        ];
+        $form['group1']['product2'] = [
+            '#title' => 'Product 2',
+            '#type' => 'radios',
+            '#default_value' => 0,
+            '#options' => $myproduct2
+        ];
+    }
+}
