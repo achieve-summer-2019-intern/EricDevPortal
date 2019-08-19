@@ -1,9 +1,11 @@
 <?php
 
 function product_bundle_form_alter(&$form, &$form_state, &$form_id) {
-    drupal_set_message($form_id);
 
     if($form_id == 'developer_app_add_for_developer_form') {
+        foreach($form as $key => $value) {
+            drupal_set_message($key . ': ' . $value);
+        }
         
         $myproduct1 = [];
         $myproduct2 = [];
@@ -12,11 +14,11 @@ function product_bundle_form_alter(&$form, &$form_state, &$form_id) {
             $display_name = substr($value, 0, 9);
             if ($display_name == 'Product 1') {
                 array_push($myproduct1, $value);
-                drupal_set_message('This is product 1: ' . $key);
+                // drupal_set_message('This is product 1: ' . $key);
             }
             if ($display_name == 'Product 2') {
                 array_push($myproduct2, $value);
-                drupal_set_message('This is product 2: ' . $key);
+                // drupal_set_message('This is product 2: ' . $key);
             }
         }
 
@@ -40,5 +42,7 @@ function product_bundle_form_alter(&$form, &$form_state, &$form_id) {
             '#default_value' => 0,
             '#options' => $myproduct2
         ];
+        unset($form['api_products']);
+
     }
 }
